@@ -1,1 +1,51 @@
 <p>recipe works!</p>
+
+<h1 class="title">
+    Bulma
+  </h1>
+
+  <p class="subtitle">
+    Modern CSS framework based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+  </p>
+
+  <div class="field">
+    <div class="control">
+      <input class="input" type="text" placeholder="Input">
+    </div>
+  </div>
+
+  <div class="field">
+    <p class="control">
+      <span class="select">
+        <select>
+          <option>Select dropdown</option>
+        </select>
+      </span>
+    </p>
+  </div>
+
+  <div class="buttons">
+    <a class="button is-primary">Primary</a>
+    <a class="button is-link">Link</a>
+  </div>
+
+  <div *ngFor="let recipe of recipes"  >
+
+    <p>Name: {{ recipe.name }}</p>
+
+  </div>
+
+  <!-- <app-recipe-item *ngFor="let n of recipes" [recipe]="n" (recipeSelected)="onRecipeSelect(n)"></app-recipe-item> -->
+
+  <!-- <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </form> -->
+  
