@@ -1,0 +1,5 @@
+<section class="section islarge">
+    <button class="button is-primary" style="margin-bottom: 10px;" [routerLink]="['/new']">Add New Recipe</button>
+
+    <app-recipe-item *ngFor="let n of recipes" [recipe]="n" (recipeSelected)="onRecipeSelect(n)"></app-recipe-item>
+</section>

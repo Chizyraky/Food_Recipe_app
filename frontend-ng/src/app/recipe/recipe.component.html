@@ -1,51 +1,53 @@
-<p>recipe works!</p>
-
-<h1 class="title">
-    Bulma
-  </h1>
-
-  <p class="subtitle">
-    Modern CSS framework based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
-  </p>
-
-  <div class="field">
-    <div class="control">
-      <input class="input" type="text" placeholder="Input">
-    </div>
+<div class="columns">
+  <div class="column is-one-third"> 
+    <section class="section islarge">
+    
+      <app-recipe-list (recipeUpdate)="recipe = $event" [deletedDetail]="detailDeleted"></app-recipe-list>
+    </section>
   </div>
-
-  <div class="field">
-    <p class="control">
-      <span class="select">
-        <select>
-          <option>Select dropdown</option>
-        </select>
-      </span>
-    </p>
+  <div class="column">
+    <div class="columns is-gapless">
+      <div class="column is-one-third">
+          <app-recipe-detail [recipeDetail]="recipe" *ngIf="recipe; else info"
+              (deletedDetail)="detailDeleted = $event" (showDetailIngredient)="showIngredients($event)">
+          </app-recipe-detail>
+          <ng-template #info>
+              <p>Please Select a Recipe</p>
+          </ng-template>
+      </div>
+      <div class="column is-one-third-mobile is-one-fifth-tablet is-one-fifth-desktop slide-in"
+          [style.visibility]="isDisabled ? 'visible' : 'hidden'"
+          style="margin-top: 10px; margin-left: 20px; margin-right: 20px;">
+          <div class="content is-hidden-mobile">
+              <div class="field is-grouped">
+                  <div class="tags has-addons">
+                      <div *ngFor="let item of recipeIngredients" style="margin-right: 5px;">
+                          <span class="tag">{{ item.name }}</span>
+                          <a class="tag is-success" href="">
+                              Add
+                              <mat-icon mat-list-icon>shopping_cart</mat-icon>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="content is-hidden-tablet">
+              <div class="field is-grouped is-grouped-multiline">
+                  <div class="control">
+                      <div class="tags are-medium has-addons">
+                          <div *ngFor="let item of recipeIngredients" style="margin-right: 5px;">
+                              <span class="tag">{{ item.name }}</span>
+                              <a class="tag is-success" href="">
+                                  Add
+                                  <mat-icon mat-list-icon>shopping_cart</mat-icon>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-
-  <div class="buttons">
-    <a class="button is-primary">Primary</a>
-    <a class="button is-link">Link</a>
   </div>
+</div>
 
-  <div *ngFor="let recipe of recipes"  >
-
-    <p>Name: {{ recipe.name }}</p>
-
-  </div>
-
-  <!-- <app-recipe-item *ngFor="let n of recipes" [recipe]="n" (recipeSelected)="onRecipeSelect(n)"></app-recipe-item> -->
-
-  <!-- <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Ex. Pizza" value="Sushi">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Leave a comment</mat-label>
-      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-    </mat-form-field>
-  </form> -->
-  

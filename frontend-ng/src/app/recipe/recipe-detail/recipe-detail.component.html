@@ -1,0 +1,61 @@
+<div class="columns"  style="padding-left: 20px; padding-right: 20px;">
+    <div class="column">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img [src]="recipeDetail.image" [alt]="recipeDetail.name">
+                </figure>
+            </div>
+            <div class="card-content" style="padding-right: 5px;">
+
+                <div class="columns is-mobile">
+                    <div class="column " style=" padding-bottom: 0px;">
+                        <p class="title is-3">{{ recipeDetail.name }}</p>
+                    </div>
+                    <div class="column is-1" style="padding-bottom: 0px;">
+                        <div class="dropdown is-hoverable is-up is-right is-pulled-right">
+                            <div class="dropdown-trigger">
+                                <button class="button edit" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                    <!-- <span>Manage Recipe</span> -->
+                                    <span class="icon is-small">
+                                        <mat-icon mat-list-icon>more_horiz</mat-icon>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                                <div class="dropdown-content is-1">
+                                    <!-- <a href="#" class="dropdown-item">
+                                        To Shopping List
+                                    </a>
+                                    <hr class="dropdown-divider"> -->
+                                    <a href="#" class="dropdown-item">
+                                        Edit Recipe
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a class="dropdown-item" (click)="deleteRecipe(recipeDetail)">
+                                        Delete Recipe
+                                        <i class="material-icons is-pulled-right">
+                                            delete_forever
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column " style="padding-top: 0px;">
+                    <p class="bd-notification is-info"> {{ recipeDetail.description }}</p>
+                </div>
+                <div class="is-italic has-text-right slide-in" (click)="toggleIngredient()" style="padding-top: 0px;">
+                    <a class="">Ingredients
+                        <i class="icon is-small material-icons is-hidden-mobile"> arrow_forward </i>
+                        <i class="icon is-small material-icons is-hidden-tablet"> arrow_downward </i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

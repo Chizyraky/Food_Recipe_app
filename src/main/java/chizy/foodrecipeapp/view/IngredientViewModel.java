@@ -22,4 +22,5 @@ public class IngredientViewModel {
 
     @NotNull
     private Integer amount;
+
 }

@@ -21,6 +21,7 @@ public class Ingredient {
     private List<Recipe> recipes;
 
     protected Ingredient(){
+
     }
 
     public Ingredient(String name, Integer amount) {

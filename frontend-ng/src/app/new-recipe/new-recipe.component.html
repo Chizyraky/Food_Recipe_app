@@ -1,0 +1,29 @@
+
+
+  <p>What's your favorite animal?</p>
+  <form [formGroup]="newRecipe" (ngSubmit)="onSave()">
+
+    <div class="field">
+      <div class="control">
+        <input class="input is-info" type="text" formControlName="name" placeholder="Info input">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <input class="input is-info" type="text" formControlName="description" placeholder="Description">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <input class="input is-info" type="text" formControlName="image" placeholder="Image http">
+      </div>
+    </div>
+    
+  </form>
+  
+  <div class="buttons">
+    <button class="button is-danger" >Cancel</button>
+    <button class="button is-link" type="submit" (click)="onSave()">Save</button>
+  </div>

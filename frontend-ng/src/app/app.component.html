@@ -1,2 +1,24 @@
+<app-header (optionSelected)="onNavigation($event)" (cookListToggle)="cookNavToggle($event)"></app-header>
+
+<div>
+    <!-- <app-recipe *ngIf="optionLoaded === 'recipes'"></app-recipe> -->
+    <!-- <app-shopping-list *ngIf="optionLoaded !== 'recipes'"></app-shopping-list> -->
+
+</div>
+
+<mat-sidenav-container class="example-sidenav-container container is-fluid" is-mobile-hidden>
+    <mat-sidenav #snav mode="over" position="end" fixedInViewport="true" fixedTopGap="54"
+        [opened]="mobileQuery.matches ? 'false' : 'snavBool'">
+        <mat-nav-list>
+            <!-- <app-cooking-list></app-cooking-list> -->
+        </mat-nav-list>
+    </mat-sidenav>
+
+</mat-sidenav-container>
+
+
+<!-- <div [hidden]="true">
+    <button #hiddenBtn class="button" (click)="snav.toggle()" [style.visibility]="hidden" [hidden]="true">Check</button>
+</div> -->
 
 <router-outlet></router-outlet>

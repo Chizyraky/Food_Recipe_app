@@ -1,0 +1,108 @@
+<!-- <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="padding-bottom: 10px;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <strong>RECIPE BOOK</strong>
+            </a>
+            <a class="navbar-burger burger" role="button" aria-expanded="true" aria-label="menu" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <div class="tabs is-boxed is-fullwidth">
+                    <ul>
+                        <li [class.is-active]="onrecipe" (click)="onSelect('recipes')">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+                                <span>Recipes</span>
+                            </a>
+                        </li>
+                        <li [class.is-active]="onIngre">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+                                <span>Ingredient</span>
+                            </a>
+                        </li>
+                        <li [class.is-active]="onList" (click)="onSelect('shopping-list')">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+                                <span>Shopping List</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="button is-primary is-outlined is-rounded" (click)="cookListClick()">Say
+                        To Cook List</a> </div>
+            </div>
+        </div>
+    </div>
+</nav>
+ -->
+ <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger burger" (click)="burgerCntrl()" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Recipes
+        </a>
+  
+        <a class="navbar-item">
+          Ingredient
+        </a>
+  
+        <!-- <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div> -->
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

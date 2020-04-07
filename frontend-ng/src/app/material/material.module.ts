@@ -5,6 +5,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -17,7 +22,12 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatListModule,
     MatInputModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialModule { }

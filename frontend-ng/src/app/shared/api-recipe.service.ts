@@ -44,6 +44,10 @@ export class ApiRecipeService {
     return this.http.get<Ingredient[]>(this.INGREDIENTS_BY_RECIPE_URL + recipeId);
   }
 
+  getRecipeById(recipeId: number): Observable<Recipe> {
+    return this.http.get<Recipe>(this.DELETE_RECIPE_URL + recipeId);
+  }
+
   saveIngredient(ingred: Ingredient): Observable<Ingredient> {
     return this.http.post<Ingredient>(this.SAVE_UPDATE_INGREDIENT_URL, ingred);
   }

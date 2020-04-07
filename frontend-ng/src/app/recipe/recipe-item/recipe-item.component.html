@@ -1,0 +1,20 @@
+<a href="#" (click)="onSelected()">
+<div class="box" style="margin-bottom: 10px; padding-bottom: 5px; padding-top: 10px;">
+    <article class="media">
+        <div class="media-left">
+            <figure class="image is-96x96">
+                <img [src]="recipe.image" alt="Image">
+            </figure>
+        </div>
+        <div class="media-content">
+            <div class="content">
+                <p>
+                    <strong class="title is-4">{{ recipe.name }}</strong>
+                    <br>
+                    {{ recipe.description }}
+                </p>
+            </div>
+        </div>
+    </article>
+  </div>
+  </a>

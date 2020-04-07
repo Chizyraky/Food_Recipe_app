@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/recipe")
 @CrossOrigin
 public class RecipeController {
-// http://localhost:8085/delete/54
+// http://localhost:8085/api/recipe
     @Autowired
     private RecipeRepository recipeRepository;
 
@@ -31,6 +31,7 @@ public class RecipeController {
     @PostMapping
     public RecipeViewModel save(@RequestBody RecipeViewModel notebookViewModel, BindingResult bindingResult) {
 
+        //
         if(bindingResult.hasErrors()){
             throw new ValidationException();
         }
@@ -39,6 +40,11 @@ public class RecipeController {
 //            return recipeService.updateNotebook(notebookViewModel);
 //        }
         return recipeService.save(notebookViewModel);
+    }
+
+    @GetMapping("/{id}")
+    public RecipeViewModel getById(@PathVariable Integer id) {
+        return recipeService.getRecipeById(id);
     }
 
     @DeleteMapping("/{id}")

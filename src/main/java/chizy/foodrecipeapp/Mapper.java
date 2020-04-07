@@ -28,10 +28,11 @@ public class Mapper {
         return viewModel;
     }
 
-    public Ingredient convertToNoteEntity(IngredientViewModel viewModel) {
+    public Ingredient convertToIngredientEntity(IngredientViewModel viewModel) {
         Ingredient entity;
 
         if(viewModel.getId() != 0){
+            // Editing / Replacing database model
             entity = new Ingredient( viewModel.getId(), viewModel.getName(), viewModel.getAmount());
 
         } else{
@@ -52,7 +53,7 @@ public class Mapper {
     }
 
     public Recipe convertToRecipeEntity(RecipeViewModel viewModel) {
-        var note = this.recipeRepository.findById(viewModel.getId()).get();
+        var note = this.recipeRepository.findById(viewModel.getId());
         Recipe entity;
         if(viewModel.getId() == 0 ) {
             entity = new Recipe(viewModel.getName(), viewModel.getDescription(), viewModel.getImage());

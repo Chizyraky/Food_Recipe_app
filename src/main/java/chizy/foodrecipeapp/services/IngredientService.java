@@ -31,7 +31,7 @@ public class IngredientService {
     @Transactional
     public IngredientViewModel save(IngredientViewModel ingrCreateViewModel) {
 
-        Ingredient ingredientEntity = mapper.convertToNoteEntity(ingrCreateViewModel);
+        Ingredient ingredientEntity = mapper.convertToIngredientEntity(ingrCreateViewModel);
         // save note instance to db
         ingredientRepository.save(ingredientEntity);
         return mapper.convertToIngredientViewModel(ingredientEntity);
@@ -73,7 +73,7 @@ public class IngredientService {
 
 
     public IngredientViewModel updateIngredient(IngredientViewModel noteViewModel) {
-        Ingredient entity = mapper.convertToNoteEntity(noteViewModel);
+        Ingredient entity = mapper.convertToIngredientEntity(noteViewModel);
 
         ingredientRepository.save(entity);
 
